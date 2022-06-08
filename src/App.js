@@ -2,22 +2,22 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+    const hellooss = [];
+    const stars=[];
+    for(let j=0;j<10;j++){
+        const dizi=[];
+        for( let k=0;k<j;k++){
+            dizi.push(" k:"+k+" j:"+j+" " );
+        }
+        stars.push(dizi);
+    }
+    for(let i=0;i<10;i++){
+        hellooss.push(<div><a>{stars.at(i)}MAİDE{stars.at(i)}</a><br/></div>);
+    }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        {hellooss}
     </div>
   );
 }
